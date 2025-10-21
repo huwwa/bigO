@@ -7,18 +7,6 @@
  The plotted graph of `T(n)` versus `n` shows a nearly **perfect linear relationship**.
  This confirms that the time complexity of the linear search algorithm is indeed **O(n)**.
  
- To further verify linearity, we calculate the constant $( c_{\text{local}} = \frac{T(n)}{n} )$ for each data point:
- 
- | n (elements) | T(n) (seconds) | c_local (seconds per element) |
- | ------------ | -------------- | ----------------------------- |
- | 10,000,000   | 0.039328       | 3.932800e-9                   |
- | 20,000,000   | 0.078715       | 3.935749e-9                   |
- | 50,000,000   | 0.196756       | 3.935119e-9                   |
- | 75,000,000   | 0.294965       | 3.932866e-9                   |
- | 100,000,000  | 0.392885       | 3.928850e-9                   |
- 
- The values of $( c_{\text{local}} )$ remain almost constant as ( n ) increases, indicating that the runtime grows linearly with respect to input size.
- 
  **Average constant $(( c_{\text{avg}} ))$**:
  
 $( c_{\text{avg}} = 3.93318 \times 10^{-9} \text{ seconds per operation} )$
