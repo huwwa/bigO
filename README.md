@@ -36,7 +36,7 @@ $( c_{\text{avg}} = 3.93318 \times 10^{-9} \text{ seconds per operation} )$
  
  ## Conclusion
  
- Through this experiment, we empirically verified that the **linear search algorithm** exhibits **O(n)** time complexity, as predicted by asymptotic analysis.
+ Through this experiment, I empirically verified that the **linear search algorithm** exhibits **O(n)** time complexity, as predicted by asymptotic analysis.
  The measured execution times increased proportionally with the input size, confirming the theoretical linear growth rate.
  
- We also observed that the constant ( c ) representing the time per comparison is approximately **3.93e-9 seconds per operation** on my system.
+ I also observed that the constant ( c ) representing the time per comparison is approximately **3.93e-9 seconds per operation** on my system.
