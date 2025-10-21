@@ -1,21 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <time.h>
 
 #define NOT_FOUND -1
-#define ITERATIONS_PER_ARRAY 300
+#define ITERATIONS_PER_ARRAY 3
 
 #define LIST \
     X(arr1, 10000000) \
     X(arr2, 20000000) \
     X(arr3, 50000000) \
-    X(arr4, 70500000) \
+    X(arr4, 75000000) \
     X(arr5, 100000000)
 
-int linear_search(int *arr, int key, uint32_t n)
+int linear_search(int *arr, int key, size_t n)
 {
-    for (uint32_t i = 0; i < n; ++i)
+    for (size_t i = 0; i < n; ++i)
 	if (arr[i] == key)
 	    return i;
     return NOT_FOUND;
@@ -46,17 +45,17 @@ int main(void)
 
     fprintf(f, "n,T(n)\n");
     srand((unsigned int)time(NULL));
-#define X(arrx, n) int32_t *arrx; \
+#define X(arrx, n) int *arrx; \
     arrx = malloc(n * sizeof(*arrx)); \
     if (!arrx) { \
         perror("malloc"); \
        exit(EXIT_FAILURE); \
     } \
-    for (uint32_t i = 0; i < n; ++i) \
+    for (size_t i = 0; i < n; ++i) \
 	arrx[i] = rand(); \
     do { \
 	begin = get_time(); \
-	for (uint32_t i = 0; i < ITERATIONS_PER_ARRAY; ++i) \
+	for (size_t i = 0; i < ITERATIONS_PER_ARRAY; ++i) \
 	    ret = linear_search(arrx, -1, n); \
 	end = get_time(); \
 	avg = (end - begin) / ITERATIONS_PER_ARRAY; \
